@@ -31,15 +31,12 @@ function App(): React.JSX.Element {
 
   return (
     <GestureHandlerRootView>
-      {/*<SafeAreaView style={styles.container}>*/}
         <MobxProvider {...stores}>
-          {/*<Provider>*/}
           <StatusBar
             barStyle="dark-content"
             backgroundColor="transparent"
             translucent={!0}
           />
-          {/*<XiaoshuProvider>*/}
           <PaperProvider>
             <Provider>
                   <NavigationContainer
@@ -52,7 +49,6 @@ function App(): React.JSX.Element {
                           headerShown:!1,
                         }
                       }
-                      initialRouteName={'Main'}
                     >
                       {
                         Router.map((item) =>
@@ -63,7 +59,6 @@ function App(): React.JSX.Element {
                       }
                     </Stack.Navigator>
                   </NavigationContainer>
-              {/*</Provider>*/}
             </Provider>
           </PaperProvider>
         </MobxProvider>
